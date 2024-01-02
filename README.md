@@ -16,6 +16,7 @@ Use it as you want
 - Ease of Use.
 - NestJS
 - Gmail SMTP
+- Swagger UI
   
 ## Screenshots 
  <p align="center">
