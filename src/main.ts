@@ -8,8 +8,8 @@ async function bootstrap() {
   const app = await NestFactory.create(AppModule);
   app.enableCors();
   const config = new DocumentBuilder()
-    .setTitle('Change Code API')
-    .setDescription('API for converting code')
+    .setTitle('Email Sender')
+    .setDescription('gmail email sending service')
     .setVersion('1.0')
     .build();
   const document = SwaggerModule.createDocument(app, config);
