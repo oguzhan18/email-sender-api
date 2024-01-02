@@ -6,7 +6,7 @@ import { ApiProperty } from '@nestjs/swagger';
 export class SendEmailDto {
   @ApiProperty({
     example: 'jonesalemdar@gmail.com',
-    description: 'Gönderen e-posta adresi',
+    description: 'Sender e-mail address',
   })
   @IsNotEmpty()
   @IsEmail()
@@ -14,20 +14,20 @@ export class SendEmailDto {
 
   @ApiProperty({
     example: 'recipient@example.com',
-    description: 'Alıcı e-posta adresi',
+    description: 'Recipient e-mail address',
   })
   @IsNotEmpty()
   @IsEmail()
   to: string;
 
-  @ApiProperty({ example: 'Test', description: 'E-posta konusu' })
+  @ApiProperty({ example: 'Test', description: 'Email subject' })
   @IsNotEmpty()
   @IsString()
   subject: string;
 
   @ApiProperty({
-    example: `<h1>Merhaba Dünya</h1>`,
-    description: 'E-posta html içeriği',
+    example: `<h1 style="color:red; text-align:center;">Hello World</h1>`,
+    description: 'Email html content',
   })
   @IsNotEmpty()
   @IsString()
